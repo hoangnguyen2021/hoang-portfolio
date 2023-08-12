@@ -10,13 +10,27 @@ const config: Config = {
         extend: {
             fontFamily: {
                 'sans': ['var(--font-sofia-sans)', 'font-sans'],
-                'mono': ['var(--font-roboto-mono)', 'font-mono']
+                'mono': ['var(--font-roboto-mono)', 'font-mono'],
+                'montserrat': ['var(--font-montserrat)']
             },
             colors: {
-                'dark-cyan': '#073042',
+                'tiber': '#073042',
+                'tusk': '#eff7cf',
+                'eucalyptus': '#3ddc84',
+                'pattens-blue': '#d7effe',
+                'adc-orange': '#e4701c'
             },
             backgroundImage: {
-                'android-developers': 'url(./images/top-background.png)'
+                'android-developers': 'url(../images/top-background.png)'
+            },
+            borderWidth: {
+                DEFAULT: '1px',
+                '0': '0',
+                '2': '2px',
+                '3': '3px',
+                '4': '4px',
+                '6': '6px',
+                '8': '8px',
             }
         },
     },
