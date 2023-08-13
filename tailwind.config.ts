@@ -32,6 +32,11 @@ const config: Config = {
                 '4': '4px',
                 '6': '6px',
                 '8': '8px',
+            },
+            transitionProperty: {
+                'width': 'width',
+                'height': 'height',
+                'visibility': 'visibility'
             }
         },
     },
