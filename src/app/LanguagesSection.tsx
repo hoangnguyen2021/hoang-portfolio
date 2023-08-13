@@ -15,19 +15,20 @@ type LanguagesSectionProps = {}
 
 export type Language = {
     name: string,
-    logo: StaticImageData
+    logo: StaticImageData,
+    yearsOfExp: string
 }
 
 const languages: Language[] = [
-    {name: "Kotlin", logo: kotlinSvg},
-    {name: "Java", logo: javaSvg},
-    {name: "C#", logo: cSharpSvg},
-    {name: "Javascript", logo: javascriptSvg},
-    {name: "Typescript", logo: typescriptSvg},
-    {name: "C/C++", logo: cplusplusSvg},
-    {name: "Python", logo: pythonSvg},
-    {name: "Swift", logo: swiftSvg},
-    {name: "MySQL", logo: mySqlSvg}
+    {name: "Kotlin", logo: kotlinSvg, yearsOfExp: "3+"},
+    {name: "Java", logo: javaSvg, yearsOfExp: "4+"},
+    {name: "C#", logo: cSharpSvg, yearsOfExp: "1+"},
+    {name: "Javascript", logo: javascriptSvg, yearsOfExp: "3+"},
+    {name: "Typescript", logo: typescriptSvg, yearsOfExp: "3+"},
+    {name: "C/C++", logo: cplusplusSvg, yearsOfExp: "4+"},
+    {name: "Python", logo: pythonSvg, yearsOfExp: "1+"},
+    {name: "Swift", logo: swiftSvg, yearsOfExp: "1+"},
+    {name: "MySQL", logo: mySqlSvg, yearsOfExp: "2+"}
 ];
 
 const LanguagesSection: React.FC<LanguagesSectionProps> = () => {
@@ -35,9 +36,9 @@ const LanguagesSection: React.FC<LanguagesSectionProps> = () => {
         <section className="bg-white">
             <div className="flex justify-around px-20 py-10">
                 {languages.map(language =>
-                    <LanguageComponent key={language.name} name={language.name} logo={language.logo}/>)}
+                    <LanguageComponent key={language.name} name={language.name} logo={language.logo}
+                                       yearsOfExp={language.yearsOfExp}/>)}
             </div>
-            <div className="border-dashed border-2 border-tiber"></div>
         </section>
     );
 };

@@ -4,6 +4,9 @@ import IntroSection from "@/app/IntroSection";
 import SectionHeading from "@/components/SectionHeading";
 import LanguagesSection from "@/app/LanguagesSection";
 import ADCSection from "@/app/ADCSection";
+import WapoSection from "@/app/WapoSection";
+import UGASection from "@/app/UGASection";
+import React from "react";
 
 const Home = () => {
     return (
@@ -22,12 +25,19 @@ const Home = () => {
             </div>
             <IntroSection/>
             <div>
-                <SectionHeading title="Skills"/>
+                <SectionHeading title="Languages"/>
                 <LanguagesSection/>
             </div>
+            <div className="border-dashed border-2 border-tiber"></div>
+            <div>
+                <SectionHeading title="Education" primary={false}/>
+                <UGASection />
+            </div>
+            <div className="border-dashed border-2 border-tiber"></div>
             <div>
                 <SectionHeading title="Experiences"/>
                 <ADCSection />
+                <WapoSection />
             </div>
         </main>
     )
