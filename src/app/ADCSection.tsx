@@ -9,12 +9,12 @@ const ADCSection: React.FC<ADCSectionProps> = () => {
     return (
         <section>
             <div
-                className="relative w-full h-96 bg-gradient-to-r from-adc-orange from-30% to-white to-55% grid grid-cols-2 px-20 py-10">
+                className="relative w-full h-96 grid grid-cols-3 px-20 py-10">
                 <Image src={adcLogo} alt={"Alarm.com"}
                        className="absolute top-0 left-0 w-auto h-full object-cover"/>
-                <div className="col-start-2 col-end-3 flex flex-col gap-y-3">
+                <div className="col-start-2 col-end-4 flex flex-col justify-center gap-y-3">
                     <div className="flex justify-between items-center">
-                        <Image src={adcLogo2} alt="" className="h-6 w-auto"/>
+                        <Image src={adcLogo2} alt="" className="h-8 w-auto"/>
                         <div className="text-lg font-normal font-sans">
                             <span className="text-gray-500">Tysons, Virginia</span>
                             <span className="text-tiber"> | May 2023 - August 2023</span>
@@ -32,6 +32,7 @@ const ADCSection: React.FC<ADCSectionProps> = () => {
                         <p>• Work upon ASP.NET C# application to support sending down Offline Device Status to mobile
                             clients.</p>
                         <p>• Write testing for implemented features on backend .NET application and Android client.</p>
+                        <p>• Refactor deprecated Android Permissions API to new runtime Permissions API to request media storage and camera Permissions for access to various features in the app.</p>
                     </div>
                 </div>
 

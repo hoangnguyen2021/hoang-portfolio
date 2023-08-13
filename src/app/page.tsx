@@ -2,11 +2,33 @@ import Image from 'next/image'
 import madHeaderGif from '@/images/mad-header.gif'
 import IntroSection from "@/app/IntroSection";
 import SectionHeading from "@/components/SectionHeading";
-import LanguagesSection from "@/app/LanguagesSection";
+import SkillsSection, {Skill} from "@/app/SkillsSection";
 import ADCSection from "@/app/ADCSection";
 import WapoSection from "@/app/WapoSection";
 import UGASection from "@/app/UGASection";
 import React from "react";
+import SkillTabs from "@/components/SkillTabs";
+import kotlinSvg from "@/images/kotlin.svg";
+import javaSvg from "@/images/java.svg";
+import cSharpSvg from "@/images/csharp.svg";
+import javascriptSvg from "@/images/javascript.svg";
+import typescriptSvg from "@/images/typescript.svg";
+import cplusplusSvg from "@/images/cplusplus.svg";
+import pythonSvg from "@/images/python.svg";
+import swiftSvg from "@/images/swift.svg";
+import mySqlSvg from "@/images/mysql.svg";
+
+const skills: Skill[] = [
+    {id: 1, name: "Kotlin", logo: kotlinSvg, yearsOfExp: "3+"},
+    {id: 2, name: "Java", logo: javaSvg, yearsOfExp: "4+"},
+    {id: 3, name: "C#", logo: cSharpSvg, yearsOfExp: "1+"},
+    {id: 4, name: "Javascript", logo: javascriptSvg, yearsOfExp: "3+"},
+    {id: 5, name: "Typescript", logo: typescriptSvg, yearsOfExp: "3+"},
+    {id: 6, name: "C/C++", logo: cplusplusSvg, yearsOfExp: "4+"},
+    {id: 7, name: "Python", logo: pythonSvg, yearsOfExp: "1+"},
+    {id: 8, name: "Swift", logo: swiftSvg, yearsOfExp: "1+"},
+    {id: 9, name: "MySQL", logo: mySqlSvg, yearsOfExp: "2+"}
+];
 
 const Home = () => {
     return (
@@ -25,19 +47,24 @@ const Home = () => {
             </div>
             <IntroSection/>
             <div>
-                <SectionHeading title="Languages"/>
-                <LanguagesSection/>
+                <SectionHeading title="Skills"/>
+                <SkillsSection skills={skills}/>
+                <SkillTabs/>
             </div>
             <div className="border-dashed border-2 border-tiber"></div>
             <div>
                 <SectionHeading title="Education" primary={false}/>
-                <UGASection />
+                <UGASection/>
             </div>
             <div className="border-dashed border-2 border-tiber"></div>
             <div>
                 <SectionHeading title="Experiences"/>
-                <ADCSection />
-                <WapoSection />
+                <ADCSection/>
+                <div className="grid grid-cols-2">
+                    <div className="col-span-1 border-3 border-adc-orange"></div>
+                    <div className="col-span-1 border-3 border-black"></div>
+                </div>
+                <WapoSection/>
             </div>
         </main>
     )

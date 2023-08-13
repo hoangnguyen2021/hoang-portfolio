@@ -9,12 +9,12 @@ const WapoSection: React.FC<ADCSectionProps> = () => {
     return (
         <section>
             <div
-                className="relative w-full h-96 bg-gradient-to-l from-black from-30% to-white to-55% grid grid-cols-2 px-20 py-10">
+                className="relative w-full h-96 grid grid-cols-3 px-20 py-10">
                 <Image src={wapoLogo} alt={"The Washington Post"}
                        className="absolute top-0 right-0 w-auto h-full object-cover"/>
-                <div className="col-start-1 col-end-2 flex flex-col gap-y-3">
+                <div className="col-start-1 col-end-3 flex flex-col justify-center gap-y-3">
                     <div className="flex justify-between items-center">
-                        <Image src={wapoName} alt="" className="w-auto h-12"/>
+                        <Image src={wapoName} alt="" className="w-auto h-14"/>
                         <div className="text-lg font-normal font-sans">
                             <span className="text-gray-500">Washington, D.C.</span>
                             <span className="text-tiber"> | May 2022 - December 2022</span>
@@ -33,6 +33,10 @@ const WapoSection: React.FC<ADCSectionProps> = () => {
                         <p>• Implement video countdown timer and auto-advancing for the app’s Vertical Video feature to
                             deliver compelling visual storytelling content and appeal to younger subscribers who are
                             used to this experience on other platforms.</p>
+                        <p>• Build CTA links for the app’s Immersion Carousel that delivers the breath of news coverage
+                            by providing the immersive experience to the users. The project increases overall Top
+                            Stories CTR from 62% to 67% and increase the percentage of users who have seen half of the
+                            headlines on Top Stories from 30% to 40%.</p>
                     </div>
                 </div>
 

@@ -1,11 +1,11 @@
 import Image from "next/image";
 import React from "react";
-import {Language} from "@/app/LanguagesSection";
+import {Skill} from "@/app/SkillsSection";
 
-type LanguageProps = Language;
+type SkillComponentProps = Skill;
 
-const LanguageComponent: React.FC<LanguageProps> = (language) => {
-    const {name, logo, yearsOfExp} = language;
+const SkillComponent: React.FC<SkillComponentProps> = (skill) => {
+    const {name, logo, yearsOfExp} = skill;
 
     return (
         <div className="flex flex-col justify-center items-center gap-y-5">
@@ -16,4 +16,4 @@ const LanguageComponent: React.FC<LanguageProps> = (language) => {
     );
 };
 
-export default LanguageComponent;
+export default SkillComponent;
