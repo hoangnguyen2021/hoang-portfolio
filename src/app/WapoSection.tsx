@@ -128,8 +128,8 @@ const WapoSection: React.FC<ADCSectionProps> = () => {
                             <button
                                 onClick={expandOrCollapse}
                                 className="w-full bg-black border-3 border-red-600 text-white text-md font-mono flex justify-center py-2">
-                                {expanding ? <ChevronUpIcon className="h-5"/> :
-                                    <ChevronDownIcon className="h-5"/>}
+                                {expanding ? <ChevronUpIcon/> :
+                                    <ChevronDownIcon/>}
                             </button>
                         </div>
                     </Transition>
