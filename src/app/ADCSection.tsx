@@ -98,8 +98,8 @@ const ADCSection: React.FC<ADCSectionProps> = () => {
                             <button
                                 onClick={expandOrCollapse}
                                 className="w-full bg-adc-orange border-3 border-black text-white text-md font-mono flex justify-center py-2">
-                                {expanding ? <ChevronUpIcon className="h-5"/> :
-                                    <ChevronDownIcon className="h-5"/>}
+                                {expanding ? <ChevronUpIcon/> :
+                                    <ChevronDownIcon/>}
                             </button>
                         </div>
                     </Transition>
