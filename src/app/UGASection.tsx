@@ -31,9 +31,7 @@ const UGASection: React.FC<ADCSectionProps> = () => {
                             App.</p>
                     </div>
                 </div>
-
             </div>
-
         </section>
     );
 };

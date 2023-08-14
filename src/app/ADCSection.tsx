@@ -80,7 +80,9 @@ const ADCSection: React.FC<ADCSectionProps> = () => {
                                 <Image src={offlineLockPng} alt="Offline lock" className="w-72 h-auto"/>
                                 <Image src={offlineGatePng} alt="Offline gate" className="w-72 h-auto"/>
                             </div>
-                            <p className="mt-5 text-black text-md font-normal font-sans text-center">Screenshots of Offline Device Status feature in Alarm.com Customer App. These show Offline Status of Alarm.com Water Dragon, Water Meter & Valve, Z-Wave Lock, and Remote Gate.</p>
+                            <p className="mt-5 text-black text-md font-normal font-sans text-center">Screenshots of
+                                Offline Device Status feature in Alarm.com Customer App. These show Offline Status of
+                                Alarm.com Water Dragon, Water Meter & Valve, Z-Wave Lock, and Remote Gate.</p>
                         </>}
                     </div>
                     <Transition
@@ -96,8 +98,8 @@ const ADCSection: React.FC<ADCSectionProps> = () => {
                             <button
                                 onClick={expandOrCollapse}
                                 className="w-full bg-adc-orange border-3 border-black text-white text-md font-mono flex justify-center py-2">
-                                {expanding ? <ChevronUpIcon className="h-5" aria-hidden="true"/> :
-                                    <ChevronDownIcon className="h-5" aria-hidden="true"/>}
+                                {expanding ? <ChevronUpIcon className="h-5"/> :
+                                    <ChevronDownIcon className="h-5"/>}
                             </button>
                         </div>
                     </Transition>

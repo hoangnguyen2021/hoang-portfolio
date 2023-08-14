@@ -109,7 +109,8 @@ const WapoSection: React.FC<ADCSectionProps> = () => {
                                     </div>
                                 </div>
                                 <p className="mt-5 text-black text-md font-normal font-sans text-center">From left to
-                                    right, top to bottom: Countdown timer and auto-advancing of Vertical Videos, CTA link of
+                                    right, top to bottom: Countdown timer and auto-advancing of Vertical Videos, CTA
+                                    link of
                                     Immersion Article Carousel, Live Reporter Insight, Nudge animation in Discovery</p>
                             </div>
                         }
@@ -127,8 +128,8 @@ const WapoSection: React.FC<ADCSectionProps> = () => {
                             <button
                                 onClick={expandOrCollapse}
                                 className="w-full bg-black border-3 border-red-600 text-white text-md font-mono flex justify-center py-2">
-                                {expanding ? <ChevronUpIcon className="h-5" aria-hidden="true"/> :
-                                    <ChevronDownIcon className="h-5" aria-hidden="true"/>}
+                                {expanding ? <ChevronUpIcon className="h-5"/> :
+                                    <ChevronDownIcon className="h-5"/>}
                             </button>
                         </div>
                     </Transition>
