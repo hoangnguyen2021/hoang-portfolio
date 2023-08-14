@@ -22,7 +22,7 @@ const config: Config = {
                 'uga-red': '#c32a1c'
             },
             backgroundImage: {
-                'android-developers': 'url(../images/top-background.png)'
+                'android-developers': 'url(../../public/images/top-background.png)'
             },
             borderWidth: {
                 DEFAULT: '1px',

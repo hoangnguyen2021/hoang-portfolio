@@ -1,5 +1,5 @@
 import CircularImage from "@/components/CircularImage";
-import profilePic from "../images/profile-pic.jpeg";
+import profilePic from "../../public/images/profile-pic.jpeg";
 
 const IntroSection = () => {
     return (

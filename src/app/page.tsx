@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import madHeaderGif from '@/images/mad-header.gif'
+import madHeaderGif from '../../public/gifs/mad-header.gif'
 import IntroSection from "@/app/IntroSection";
 import SectionHeading from "@/components/SectionHeading";
 import SkillsSection, {Skill} from "@/app/SkillsSection";
@@ -8,15 +8,15 @@ import WapoSection from "@/app/WapoSection";
 import UGASection from "@/app/UGASection";
 import React from "react";
 import SkillTabs from "@/components/SkillTabs";
-import kotlinSvg from "@/images/kotlin.svg";
-import javaSvg from "@/images/java.svg";
-import cSharpSvg from "@/images/csharp.svg";
-import javascriptSvg from "@/images/javascript.svg";
-import typescriptSvg from "@/images/typescript.svg";
-import cplusplusSvg from "@/images/cplusplus.svg";
-import pythonSvg from "@/images/python.svg";
-import swiftSvg from "@/images/swift.svg";
-import mySqlSvg from "@/images/mysql.svg";
+import kotlinSvg from "../../public/images/kotlin.svg";
+import javaSvg from "../../public/images/java.svg";
+import cSharpSvg from "../../public/images/csharp.svg";
+import javascriptSvg from "../../public/images/javascript.svg";
+import typescriptSvg from "../../public/images/typescript.svg";
+import cplusplusSvg from "../../public/images/cplusplus.svg";
+import pythonSvg from "../../public/images/python.svg";
+import swiftSvg from "../../public/images/swift.svg";
+import mySqlSvg from "../../public/images/mysql.svg";
 
 const skills: Skill[] = [
     {id: 1, name: "Kotlin", logo: kotlinSvg, yearsOfExp: "3+"},

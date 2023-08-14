@@ -2,8 +2,12 @@
 
 import React, {useState} from "react";
 import Image from "next/image";
-import adcLogo from "../images/alarmdotcom.jpg";
-import adcLogo2 from "../images/alarmdotcom2.png";
+import adcLogo from "../../public/images/alarmdotcom.jpg";
+import adcLogo2 from "../../public/images/alarmdotcom2.png";
+import offlineWaterPng from "../../public/images/offline-water.png";
+import offlineWater2Png from "../../public/images/offline-water2.png";
+import offlineLockPng from "../../public/images/offline-lock.png";
+import offlineGatePng from "../../public/images/offline-gate.png";
 import ChevronDownIcon from "@/components/icons/ChevronDownIcon";
 import ChevronUpIcon from "@/components/icons/ChevronUpIcon";
 import {Transition} from "@headlessui/react";
@@ -30,7 +34,7 @@ const ADCSection: React.FC<ADCSectionProps> = () => {
     return (
         <section>
             <div
-                className={classNames("relative w-full flex transition-height duration-1000", expanding ? "h-screen" : "h-96")}>
+                className={classNames("relative w-full flex transition-height duration-1000", expanding ? "h-[64rem]" : "h-96")}>
                 <Transition
                     show={!expanding}
                     enter="transition-all duration-1000"
@@ -40,10 +44,10 @@ const ADCSection: React.FC<ADCSectionProps> = () => {
                     leaveFrom="opacity-100 w-[44rem] relative"
                     leaveTo="opacity-0 w-full absolute"
                     className="relative w-[44rem] h-full">
-                    <Image src={adcLogo} alt={"Alarm.com"} className="relative w-auto h-full object-cover"/>
+                    <Image src={adcLogo} alt={"Alarm.com"} className="absolute w-auto h-full object-cover"/>
                 </Transition>
                 <div onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}
-                     className="flex flex-col h-full justify-between">
+                     className="relative flex flex-col h-full justify-between">
                     <div className="flex flex-col justify-center gap-y-3 px-20 py-10">
                         <div className="flex justify-between items-center">
                             <Image src={adcLogo2} alt="" className="w-auto h-8"/>
@@ -69,6 +73,15 @@ const ADCSection: React.FC<ADCSectionProps> = () => {
                                 media
                                 storage and camera Permissions for access to various features in the app.</p>
                         </div>
+                        {expanding && <>
+                            <div className="flex justify-evenly mt-10">
+                                <Image src={offlineWaterPng} alt="Offline water" className="w-72 h-auto"/>
+                                <Image src={offlineWater2Png} alt="Offline water 2" className="w-72 h-auto"/>
+                                <Image src={offlineLockPng} alt="Offline lock" className="w-72 h-auto"/>
+                                <Image src={offlineGatePng} alt="Offline gate" className="w-72 h-auto"/>
+                            </div>
+                            <p className="mt-5 text-black text-md font-normal font-sans text-center">Screenshots of Offline Device Status feature in Alarm.com Customer App. These show Offline Status of Alarm.com Water Dragon, Water Meter & Valve, Z-Wave Lock, and Remote Gate.</p>
+                        </>}
                     </div>
                     <Transition
                         show={showExpand}
