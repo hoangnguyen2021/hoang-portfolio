@@ -33,7 +33,7 @@ const WapoSection: React.FC<ADCSectionProps> = () => {
     return (
         <section>
             <div
-                className={classNames("relative w-full flex flex-row-reverse transition-height duration-1000", expanding ? "h-[76rem]" : "h-[28rem]")}>
+                className={classNames("relative w-auto flex flex-row-reverse transition-height duration-1000", expanding ? "h-[76rem]" : "h-[28rem]")}>
                 <Transition
                     show={!expanding}
                     enter="transition-all duration-1000"
@@ -47,7 +47,7 @@ const WapoSection: React.FC<ADCSectionProps> = () => {
                            className="absolute right-0 w-auto h-full object-cover"/>
                 </Transition>
                 <div onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}
-                     className="relative flex flex-col h-full justify-between">
+                     className="relative flex flex-col grow h-full justify-between">
                     <div className="flex flex-col justify-center gap-y-3 px-20 py-10">
                         <div className="flex justify-between items-center">
                             <Image src={wapoLogo2} alt="" className="w-auto h-14"/>
@@ -90,7 +90,7 @@ const WapoSection: React.FC<ADCSectionProps> = () => {
                                     </div>
                                     <div className="flex flex-col">
                                         <div className="flex justify-center ml-10 mb-10">
-                                            <Image src={ctaLinkGif} alt="Wapo cta link" className="w-auto h-72"/>
+                                            <Image src={ctaLinkGif} alt="Wapo cta link" priority={true} className="w-auto h-72"/>
                                         </div>
                                         <div
                                             className="flex justify-center">
@@ -98,13 +98,13 @@ const WapoSection: React.FC<ADCSectionProps> = () => {
                                         </div>
                                         <div className="flex">
                                             <Image src={liveReporterInsightJpg} alt="Wapo live reporter insight"
-                                                   className="w-auto h-64 mx-10 mt-10"/>
+                                                   priority={true} className="w-auto h-64 mx-10 mt-10"/>
                                             <div
                                                 className="flex justify-center">
                                                 <span className="border-l border-black h-full"></span>
                                             </div>
                                             <Image src={nudgeGif} alt="Wapo discovery section"
-                                                   className="w-auto h-64 mx-10 mt-10"/>
+                                                   priority={true} className="w-auto h-64 mx-10 mt-10"/>
                                         </div>
                                     </div>
                                 </div>

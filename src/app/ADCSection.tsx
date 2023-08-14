@@ -34,7 +34,7 @@ const ADCSection: React.FC<ADCSectionProps> = () => {
     return (
         <section>
             <div
-                className={classNames("relative w-full flex transition-height duration-1000", expanding ? "h-[64rem]" : "h-96")}>
+                className={classNames("relative w-auto flex transition-height duration-1000", expanding ? "h-[64rem]" : "h-96")}>
                 <Transition
                     show={!expanding}
                     enter="transition-all duration-1000"
@@ -47,7 +47,7 @@ const ADCSection: React.FC<ADCSectionProps> = () => {
                     <Image src={adcLogo} alt={"Alarm.com"} className="absolute w-auto h-full object-cover"/>
                 </Transition>
                 <div onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}
-                     className="relative flex flex-col h-full justify-between">
+                     className="relative flex flex-col grow h-full justify-between">
                     <div className="flex flex-col justify-center gap-y-3 px-20 py-10">
                         <div className="flex justify-between items-center">
                             <Image src={adcLogo2} alt="" className="w-auto h-8"/>
@@ -75,10 +75,10 @@ const ADCSection: React.FC<ADCSectionProps> = () => {
                         </div>
                         {expanding && <>
                             <div className="flex justify-evenly mt-10">
-                                <Image src={offlineWaterPng} alt="Offline water" className="w-72 h-auto"/>
-                                <Image src={offlineWater2Png} alt="Offline water 2" className="w-72 h-auto"/>
-                                <Image src={offlineLockPng} alt="Offline lock" className="w-72 h-auto"/>
-                                <Image src={offlineGatePng} alt="Offline gate" className="w-72 h-auto"/>
+                                <Image src={offlineWaterPng} alt="Offline water" priority={true} className="w-72 h-auto"/>
+                                <Image src={offlineWater2Png} alt="Offline water 2" priority={true} className="w-72 h-auto"/>
+                                <Image src={offlineLockPng} alt="Offline lock" priority={true} className="w-72 h-auto"/>
+                                <Image src={offlineGatePng} alt="Offline gate" priority={true} className="w-72 h-auto"/>
                             </div>
                             <p className="mt-5 text-black text-md font-normal font-sans text-center">Screenshots of
                                 Offline Device Status feature in Alarm.com Customer App. These show Offline Status of
