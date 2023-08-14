@@ -1,6 +1,8 @@
 import React from "react";
 
-const ChevronDownIcon: React.FC = () => {
+type ChevronDownIconProps = {};
+
+const ChevronDownIcon: React.FC<ChevronDownIconProps> = () => {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor"
              className="w-6 h-6">
