@@ -12,12 +12,16 @@ import ChevronUpIcon from "@/components/icons/ChevronUpIcon";
 import {Transition} from "@headlessui/react";
 import {classNames} from "@/utils/utils";
 import VideoPlayer from "@/components/VideoPlayer";
+import LoadingImage from "@/components/LoadingImage";
 
 type ADCSectionProps = {};
 
 const WapoSection: React.FC<ADCSectionProps> = () => {
     const [showExpandButton, setShowExpandButton] = useState<boolean>(false);
     const [expanding, setExpanding] = useState<boolean>(false);
+    const [ctaLoaded, setCtaLoaded] = useState<boolean>(false);
+    const [lufLoaded, setLufLoaded] = useState<boolean>(false);
+    const [nudgeLoaded, setNudgeLoaded] = useState<boolean>(false);
     const onMouseEnter = () => {
         setShowExpandButton(true);
     };
@@ -89,22 +93,21 @@ const WapoSection: React.FC<ADCSectionProps> = () => {
                                         <span className="border-l border-black h-full"></span>
                                     </div>
                                     <div className="flex flex-col">
-                                        <div className="flex justify-center ml-10 mb-10">
-                                            <Image src={ctaLinkGif} alt="Wapo cta link" priority={true} className="w-auto h-72"/>
-                                        </div>
+                                        <LoadingImage src={ctaLinkGif} alt="Wapo cta link"
+                                                      imgClassName="w-auto h-72 ml-10 mb-10"/>
                                         <div
                                             className="flex justify-center">
                                             <span className="border-t border-black w-full"></span>
                                         </div>
                                         <div className="flex">
-                                            <Image src={liveReporterInsightJpg} alt="Wapo live reporter insight"
-                                                   priority={true} className="w-auto h-64 mx-10 mt-10"/>
+                                            <LoadingImage src={liveReporterInsightJpg} alt="Wapo live reporter insight"
+                                                          imgClassName="w-auto h-64 mx-10 mt-10"/>
                                             <div
                                                 className="flex justify-center">
                                                 <span className="border-l border-black h-full"></span>
                                             </div>
-                                            <Image src={nudgeGif} alt="Wapo discovery section"
-                                                   priority={true} className="w-auto h-64 mx-10 mt-10"/>
+                                            <LoadingImage src={nudgeGif} alt="Wapo discovery section"
+                                                          imgClassName="w-auto h-64 mx-10 mt-10"/>
                                         </div>
                                     </div>
                                 </div>

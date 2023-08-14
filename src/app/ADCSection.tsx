@@ -12,6 +12,7 @@ import ChevronDownIcon from "@/components/icons/ChevronDownIcon";
 import ChevronUpIcon from "@/components/icons/ChevronUpIcon";
 import {Transition} from "@headlessui/react";
 import {classNames} from "@/utils/utils";
+import LoadingImage from "@/components/LoadingImage";
 
 type ADCSectionProps = {};
 
@@ -75,10 +76,10 @@ const ADCSection: React.FC<ADCSectionProps> = () => {
                         </div>
                         {expanding && <>
                             <div className="flex justify-evenly mt-10">
-                                <Image src={offlineWaterPng} alt="Offline water" priority={true} className="w-72 h-auto"/>
-                                <Image src={offlineWater2Png} alt="Offline water 2" priority={true} className="w-72 h-auto"/>
-                                <Image src={offlineLockPng} alt="Offline lock" priority={true} className="w-72 h-auto"/>
-                                <Image src={offlineGatePng} alt="Offline gate" priority={true} className="w-72 h-auto"/>
+                                <LoadingImage src={offlineWaterPng} alt="Offline water" imgClassName="w-72 h-auto" />
+                                <LoadingImage src={offlineWater2Png} alt="Offline water 2" imgClassName="w-72 h-auto" />
+                                <LoadingImage src={offlineLockPng} alt="Offline lock" imgClassName="w-72 h-auto" />
+                                <LoadingImage src={offlineGatePng} alt="Offline gate" imgClassName="w-72 h-auto" />
                             </div>
                             <p className="mt-5 text-black text-md font-normal font-sans text-center">Screenshots of
                                 Offline Device Status feature in Alarm.com Customer App. These show Offline Status of
