@@ -16,15 +16,15 @@ import {classNames} from "@/utils/utils";
 type ADCSectionProps = {};
 
 const ADCSection: React.FC<ADCSectionProps> = () => {
-    const [showExpand, setShowExpand] = useState<boolean>(false);
+    const [showExpandButton, setShowExpandButton] = useState<boolean>(false);
     const [expanding, setExpanding] = useState<boolean>(false);
 
     const onMouseEnter = () => {
-        setShowExpand(true);
+        setShowExpandButton(true);
     };
 
     const onMouseLeave = () => {
-        setShowExpand(false);
+        setShowExpandButton(false);
     };
 
     const expandOrCollapse = () => {
@@ -84,7 +84,7 @@ const ADCSection: React.FC<ADCSectionProps> = () => {
                         </>}
                     </div>
                     <Transition
-                        show={showExpand}
+                        show={showExpandButton}
                         enter="transition-opacity duration-200"
                         enterFrom="opacity-0"
                         enterTo="opacity-100"

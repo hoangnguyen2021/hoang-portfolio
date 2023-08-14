@@ -33,7 +33,7 @@ const WapoSection: React.FC<ADCSectionProps> = () => {
     return (
         <section>
             <div
-                className={classNames("relative w-full flex flex-row-reverse transition-height duration-1000", expanding ? "h-[64rem]" : "h-[28rem]")}>
+                className={classNames("relative w-full flex flex-row-reverse transition-height duration-1000", expanding ? "h-[76rem]" : "h-[28rem]")}>
                 <Transition
                     show={!expanding}
                     enter="transition-all duration-1000"

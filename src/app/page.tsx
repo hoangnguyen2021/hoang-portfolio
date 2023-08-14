@@ -17,6 +17,7 @@ import cplusplusSvg from "../../public/images/cplusplus.svg";
 import pythonSvg from "../../public/images/python.svg";
 import swiftSvg from "../../public/images/swift.svg";
 import mySqlSvg from "../../public/images/mysql.svg";
+import FooterSection from "@/app/FooterSection";
 
 const skills: Skill[] = [
     {id: 1, name: "Kotlin", logo: kotlinSvg, yearsOfExp: "3+"},
@@ -66,6 +67,7 @@ const Home = () => {
                 </div>
                 <WapoSection/>
             </div>
+            <FooterSection />
         </main>
     )
 }

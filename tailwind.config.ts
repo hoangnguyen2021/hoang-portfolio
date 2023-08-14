@@ -18,6 +18,7 @@ const config: Config = {
                 'tusk': '#eff7cf',
                 'eucalyptus': '#3ddc84',
                 'pattens-blue': '#d7effe',
+                'deep-space': '#475a64',
                 'adc-orange': '#e4701c',
                 'uga-red': '#c32a1c'
             },
