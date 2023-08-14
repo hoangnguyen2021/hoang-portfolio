@@ -34,16 +34,16 @@ const ADCSection: React.FC<ADCSectionProps> = () => {
     return (
         <section>
             <div
-                className={classNames("relative w-auto flex transition-height duration-1000", expanding ? "h-[64rem]" : "h-96")}>
+                className={classNames("relative w-full flex transition-height duration-1000", expanding ? "h-[64rem]" : "h-96")}>
                 <Transition
                     show={!expanding}
                     enter="transition-all duration-1000"
                     enterFrom="opacity-0 w-full absolute"
-                    enterTo="opacity-100 w-[44rem] relative"
+                    enterTo="opacity-100 w-96 relative"
                     leave="transition-all duration-1000"
-                    leaveFrom="opacity-100 w-[44rem] relative"
+                    leaveFrom="opacity-100 w-96 relative"
                     leaveTo="opacity-0 w-full absolute"
-                    className="relative w-[44rem] h-full">
+                    className="relative min-w-[24rem] w-96 h-full">
                     <Image src={adcLogo} alt={"Alarm.com"} className="absolute w-auto h-full object-cover"/>
                 </Transition>
                 <div onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}
