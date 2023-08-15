@@ -122,16 +122,16 @@ const SkillTabs: React.FC<SkillTabsProps> = () => {
     })
 
     return (
-        <div className="bg-tusk w-full py-10 sm:px-0">
+        <div className="bg-tusk w-full p-10">
             <div className="max-w-5xl mx-auto">
                 <Tab.Group>
-                    <Tab.List className="flex space-x-1 rounded-md bg-pattens-blue p-1">
+                    <Tab.List className="flex gap-x-1 rounded-md bg-pattens-blue p-1">
                         {Object.keys(categories).map((category) => (
                             <Tab
                                 key={category}
                                 className={({selected}) =>
                                     classNames(
-                                        "w-full rounded-lg py-2.5 text-lg font-medium font-sans leading-5",
+                                        "w-full rounded-lg py-2.5 text-sm md:text-base lg:text-lg font-medium font-sans leading-5",
                                         "ring-eucalyptus ring-offset-2 ring-offset-eucalyptus focus:outline-none focus:ring-2",
                                         selected
                                             ? "text-eucalyptus bg-white shadow"

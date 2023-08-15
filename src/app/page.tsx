@@ -1,12 +1,12 @@
-import Image from 'next/image'
-import madHeaderGif from '../../public/gifs/mad-header.gif'
+import React from "react";
+import HeroSection from "@/app/HeroSection";
 import IntroSection from "@/app/IntroSection";
 import SectionHeading from "@/components/SectionHeading";
 import SkillsSection, {Skill} from "@/app/SkillsSection";
 import ADCSection from "@/app/ADCSection";
 import WapoSection from "@/app/WapoSection";
 import UGASection from "@/app/UGASection";
-import React from "react";
+import FooterSection from "@/app/FooterSection";
 import SkillTabs from "@/components/SkillTabs";
 import kotlinSvg from "../../public/images/kotlin.svg";
 import javaSvg from "../../public/images/java.svg";
@@ -17,7 +17,6 @@ import cplusplusSvg from "../../public/images/cplusplus.svg";
 import pythonSvg from "../../public/images/python.svg";
 import swiftSvg from "../../public/images/swift.svg";
 import mySqlSvg from "../../public/images/mysql.svg";
-import FooterSection from "@/app/FooterSection";
 
 const skills: Skill[] = [
     {id: 1, name: "Kotlin", logo: kotlinSvg, yearsOfExp: "3+"},
@@ -34,18 +33,7 @@ const skills: Skill[] = [
 const Home = () => {
     return (
         <main>
-            <div className="bg-tiber h-screen grid grid-cols-12 gap-5">
-                <section className="col-span-8 flex flex-col gap-y-20 justify-center bg-android-developers bg-contain">
-                    <h1 className="text-6xl font-semibold text-white text-center font-mono">Hoang Nguyen</h1>
-                    <h2 className="text-3xl font-semibold text-white text-center font-mono">Welcome to my portfolio
-                        website!</h2>
-                </section>
-                <section className="flex justify-center items-center col-span-4">
-                    <div className="flex justify-center items-center">
-                        <Image src={madHeaderGif} alt="" width={400}/>
-                    </div>
-                </section>
-            </div>
+            <HeroSection/>
             <IntroSection/>
             <div>
                 <SectionHeading title="Skills"/>
@@ -67,7 +55,7 @@ const Home = () => {
                 </div>
                 <WapoSection/>
             </div>
-            <FooterSection />
+            <FooterSection/>
         </main>
     )
 }
