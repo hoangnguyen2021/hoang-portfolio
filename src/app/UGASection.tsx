@@ -8,21 +8,21 @@ type ADCSectionProps = {};
 const UGASection: React.FC<ADCSectionProps> = () => {
     return (
         <section>
-            <div className="relative w-full h-96 flex">
-                <Image src={ugaLogo} alt={"University of Georgia"} className="w-auto h-full object-cover"/>
-                <div className="flex flex-col gap-y-3 w-full px-20 py-10">
-                    <div className="flex justify-between items-center">
-                        <Image src={ugaLogo2} alt="" className="h-24 w-auto"/>
-                        <div className="text-lg font-normal font-sans">
+            <div className="relative w-full xl:h-96 flex flex-col xl:flex-row items-center">
+                <Image src={ugaLogo} alt={"University of Georgia"} className="w-auto sm:h-96 object-cover"/>
+                <div className="flex flex-col gap-y-3 w-full px-10 sm:px-20 py-10">
+                    <div className="flex flex-col md:flex-row justify-between items-center">
+                        <Image src={ugaLogo2} alt="" className="h-20 md:h-24 w-auto"/>
+                        <div className="text-sm md:text-base lg:text-lg font-normal font-sans">
                             <span className="text-gray-500">Athens, Georgia</span>
                             <span className="text-tiber"> | August 2021 - December 2023</span>
                         </div>
                     </div>
                     <div>
                         <span
-                            className="text-uga-red text-lg font-normal font-sans">CS Student, Senior Year</span>
+                            className="text-uga-red text-sm md:text-base lg:text-lg font-normal font-sans">CS Student, Senior Year</span>
                     </div>
-                    <div className="text-black text-md font-normal font-sans">
+                    <div className="text-black text-sm md:text-base lg:text-md font-normal font-sans">
                         <p>• Relevant coursework: Software Engineering, Data Structure, Algorithms, Database
                             Management.</p>
                         <p>• Work on UGA Pre-Professional Planner that is used by pre-professional students applying to

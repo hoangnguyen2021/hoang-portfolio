@@ -35,7 +35,7 @@ const ADCSection: React.FC<ADCSectionProps> = () => {
     return (
         <section>
             <div
-                className={classNames("relative w-full flex transition-height duration-1000", expanding ? "h-[64rem]" : "h-96")}>
+                className={classNames("relative w-full flex flex-col 2xl:flex-row items-center transition-height duration-1000", expanding ? "2xl:h-[64rem]" : "2xl:h-96")}>
                 <Transition
                     show={!expanding}
                     enter="transition-all duration-1000"
@@ -44,23 +44,24 @@ const ADCSection: React.FC<ADCSectionProps> = () => {
                     leave="transition-all duration-1000"
                     leaveFrom="opacity-100 w-96 relative"
                     leaveTo="opacity-0 w-full absolute"
-                    className="relative min-w-[24rem] w-96 h-full">
-                    <Image src={adcLogo} alt={"Alarm.com"} className="absolute w-auto h-full object-cover"/>
+                    className="relative min-w-[24rem] w-96 h-24 md:h-36 2xl:h-full">
+                    <Image src={adcLogo} alt={"Alarm.com"}
+                           className={classNames("absolute w-auto h-full object-cover")}/>
                 </Transition>
                 <div onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}
-                     className="relative flex flex-col grow h-full justify-between">
-                    <div className="flex flex-col justify-center gap-y-3 px-20 py-10">
-                        <div className="flex justify-between items-center">
-                            <Image src={adcLogo2} alt="" className="w-auto h-8"/>
-                            <div className="text-lg font-normal font-sans">
+                     className="relative flex flex-col h-full justify-between">
+                    <div className="flex flex-col justify-center gap-y-3 px-10 sm:px-20 py-10">
+                        <div className="flex flex-col gap-y-3 md:gap-y-0 md:flex-row justify-between items-center">
+                            <Image src={adcLogo2} alt="" className="w-auto h-6 lg:h-8"/>
+                            <div className="text-sm md:text-base lg:text-lg font-normal font-sans">
                                 <span className="text-gray-500">Tysons, Virginia</span>
                                 <span className="text-tiber"> | May 2023 - August 2023</span>
                             </div>
                         </div>
                         <div>
-                            <span className="text-adc-orange text-lg font-normal font-sans">Software Engineer Intern, Android</span>
+                            <span className="text-adc-orange text-sm md:text-base lg:text-lg font-normal font-sans">Software Engineer Intern, Android</span>
                         </div>
-                        <div className="text-black text-md font-normal font-sans">
+                        <div className="text-black text-sm md:text-base lg:text-md font-normal font-sans">
                             <p>• Integrate Offline Device Status on Alarm.com Customer App&apos;s Dashboard and Device
                                 Specific Screen across all Alarm.com Smart Home/Business Devices to greatly enhance user
                                 experience with clear indication of Connectivity Status and options for Recovery and
@@ -75,13 +76,23 @@ const ADCSection: React.FC<ADCSectionProps> = () => {
                                 storage and camera Permissions for access to various features in the app.</p>
                         </div>
                         {expanding && <>
-                            <div className="flex justify-evenly mt-10">
-                                <LoadingImage src={offlineWaterPng} alt="Offline water" imgClassName="w-72 h-auto" />
-                                <LoadingImage src={offlineWater2Png} alt="Offline water 2" imgClassName="w-72 h-auto" />
-                                <LoadingImage src={offlineLockPng} alt="Offline lock" imgClassName="w-72 h-auto" />
-                                <LoadingImage src={offlineGatePng} alt="Offline gate" imgClassName="w-72 h-auto" />
+                            <div className="grid grid-cols-2 xl:flex xl:justify-evenly gap-3 md:gap-5 mt-10">
+                                <div className="col-span-1">
+                                    <LoadingImage src={offlineWaterPng} alt="Offline water" imgClassName="w-72 h-auto"/>
+                                </div>
+                                <div className="col-span-1">
+                                    <LoadingImage src={offlineWater2Png} alt="Offline water 2"
+                                                  imgClassName="w-72 h-auto"/>
+                                </div>
+                                <div className="col-span-1">
+                                    <LoadingImage src={offlineLockPng} alt="Offline lock" imgClassName="w-72 h-auto"/>
+                                </div>
+                                <div className="col-span-1">
+                                    <LoadingImage src={offlineGatePng} alt="Offline gate" imgClassName="w-72 h-auto"/>
+                                </div>
                             </div>
-                            <p className="mt-5 text-black text-md font-normal font-sans text-center">Screenshots of
+                            <p className="mt-5 text-black text-sm md:text-base lg:text-md font-normal font-sans text-center">Screenshots
+                                of
                                 Offline Device Status feature in Alarm.com Customer App. These show Offline Status of
                                 Alarm.com Water Dragon, Water Meter & Valve, Z-Wave Lock, and Remote Gate.</p>
                         </>}
