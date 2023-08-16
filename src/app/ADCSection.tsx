@@ -35,7 +35,7 @@ const ADCSection: React.FC<ADCSectionProps> = () => {
     return (
         <section>
             <div
-                className={classNames("relative w-full flex flex-col 2xl:flex-row items-center transition-height duration-1000", expanding ? "2xl:h-[64rem]" : "2xl:h-96")}>
+                className={classNames("relative w-full flex flex-col 2xl:flex-row items-center transition-height duration-1000", expanding ? "2xl:h-[76rem]" : "2xl:h-[28rem]")}>
                 <Transition
                     show={!expanding}
                     enter="transition-all duration-1000"
@@ -44,14 +44,14 @@ const ADCSection: React.FC<ADCSectionProps> = () => {
                     leave="transition-all duration-1000"
                     leaveFrom="opacity-100 w-96 relative"
                     leaveTo="opacity-0 w-full absolute"
-                    className="relative min-w-[24rem] w-96 h-24 md:h-36 2xl:h-full">
+                    className="relative min-w-[28rem] w-[28rem] h-24 md:h-36 2xl:h-full">
                     <Image src={adcLogo} alt={"Alarm.com"}
-                           className={classNames("absolute w-auto h-full object-cover")}/>
+                           className={classNames("absolute left-0 w-auto h-full object-cover")}/>
                 </Transition>
                 <div onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}
                      className="relative flex flex-col h-full justify-between">
                     <div className="flex flex-col justify-center gap-y-3 px-10 sm:px-20 py-10">
-                        <div className="flex flex-col gap-y-3 md:gap-y-0 md:flex-row justify-between items-center">
+                        <div className="flex flex-col md:flex-row gap-y-3 md:gap-y-0 justify-between items-center">
                             <Image src={adcLogo2} alt="" className="w-auto h-6 lg:h-8"/>
                             <div className="text-sm md:text-base lg:text-lg font-normal font-sans">
                                 <span className="text-gray-500">Tysons, Virginia</span>

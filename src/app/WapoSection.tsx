@@ -19,9 +19,7 @@ type ADCSectionProps = {};
 const WapoSection: React.FC<ADCSectionProps> = () => {
     const [showExpandButton, setShowExpandButton] = useState<boolean>(false);
     const [expanding, setExpanding] = useState<boolean>(false);
-    const [ctaLoaded, setCtaLoaded] = useState<boolean>(false);
-    const [lufLoaded, setLufLoaded] = useState<boolean>(false);
-    const [nudgeLoaded, setNudgeLoaded] = useState<boolean>(false);
+
     const onMouseEnter = () => {
         setShowExpandButton(true);
     };
@@ -37,7 +35,7 @@ const WapoSection: React.FC<ADCSectionProps> = () => {
     return (
         <section>
             <div
-                className={classNames("relative w-full flex flex-row-reverse transition-height duration-1000", expanding ? "h-[76rem]" : "h-[28rem]")}>
+                className={classNames("relative w-full flex flex-col 2xl:flex-row-reverse items-center transition-height duration-1000", expanding ? "2xl:h-[76rem]" : "2xl:h-[28rem]")}>
                 <Transition
                     show={!expanding}
                     enter="transition-all duration-1000"
@@ -46,25 +44,25 @@ const WapoSection: React.FC<ADCSectionProps> = () => {
                     leave="transition-all duration-1000"
                     leaveFrom="opacity-100 w-[28rem] relative"
                     leaveTo="opacity-0 w-full absolute right-0"
-                    className="relative min-w-[28rem] w-[28rem] h-full">
+                    className="relative min-w-[28rem] w-[28rem] h-24 md:h-36 2xl:h-full">
                     <Image src={wapoLogo1} alt={"The Washington Post"}
                            className="absolute right-0 w-auto h-full object-cover"/>
                 </Transition>
                 <div onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}
-                     className="relative flex flex-col grow h-full justify-between">
-                    <div className="flex flex-col justify-center gap-y-3 px-20 py-10">
-                        <div className="flex justify-between items-center">
-                            <Image src={wapoLogo2} alt="" className="w-auto h-14"/>
-                            <div className="text-lg font-normal font-sans">
+                     className="relative flex flex-col h-full justify-between">
+                    <div className="flex flex-col justify-center gap-y-3 px-10 sm:px-20 py-10">
+                        <div className="flex flex-col lg:flex-row gap-y-3 lg:gap-y-0 justify-between items-center">
+                            <Image src={wapoLogo2} alt="" className="w-auto h-12 lg:h-14"/>
+                            <div className="text-sm md:text-base lg:text-lg font-normal font-sans">
                                 <span className="text-gray-500">Washington, D.C.</span>
                                 <span className="text-tiber"> | May 2022 - December 2022</span>
                             </div>
                         </div>
                         <div>
                         <span
-                            className="text-gray-500 text-lg font-normal font-sans">Software Engineer Intern, Android</span>
+                            className="text-gray-500 text-sm md:text-base lg:text-lg font-normal font-sans">Software Engineer Intern, Android</span>
                         </div>
-                        <div className="text-black text-md font-normal font-sans">
+                        <div className="text-black text-sm md:text-base lg:text-md font-normal font-sans">
                             <p>• Build Washington Post Wear App on Wear OS that features browsing articles, playing
                                 text-to-speech and podcasts, paywall, push notifications, watch face complications, and
                                 mobile-wear communication.</p>
@@ -83,38 +81,41 @@ const WapoSection: React.FC<ADCSectionProps> = () => {
                             <p>• Integrate in-app tracking and send user-related tracking metrics to analytics.</p>
                         </div>
                         {expanding &&
-                            <div className="max-w-7xl mx-auto mt-10 flex flex-col gap-y-5">
-                                <div className="flex justify-center">
-                                    <div className="flex justify-center mr-10">
+                            <div className="max-w-7xl mx-auto mt-10 flex flex-col items-center gap-y-5">
+                                <div
+                                    className="grid grid-cols-1 gap-y-5 lg:gap-y-0 lg:flex lg:justify-center lg:items-stretch">
+                                    <div className="flex justify-center lg:mr-5 xl:mr-10">
                                         <VideoPlayer path="videos/countdown-timer.mp4" width={300} height={650}/>
                                     </div>
                                     <div
                                         className="flex justify-center">
-                                        <span className="border-l border-black h-full"></span>
+                                        <span className="border-l border-black"></span>
                                     </div>
-                                    <div className="flex flex-col">
+                                    <div className="w-full flex flex-col items-stretch gap-y-5 lg:gap-y-0">
                                         <LoadingImage src={ctaLinkGif} alt="Wapo cta link"
-                                                      imgClassName="w-auto h-72 ml-10 mb-10"/>
+                                                      imgClassName="w-auto h-36 md:h-56 xl:h-72 lg:ml-5 xl:ml-10 lg:mb-5 xl:mb-10"/>
                                         <div
-                                            className="flex justify-center">
+                                            className="flex justify-center w-0 lg:w-full">
                                             <span className="border-t border-black w-full"></span>
                                         </div>
-                                        <div className="flex">
+                                        <div
+                                            className="h-full flex flex-col gap-y-5 md:gap-y-0 md:flex-row md:justify-center md:gap-x-5">
                                             <LoadingImage src={liveReporterInsightJpg} alt="Wapo live reporter insight"
-                                                          imgClassName="w-auto h-64 mx-10 mt-10"/>
+                                                          imgClassName="w-auto h-56 xl:h-64 lg:mx-5 xl:mx-10 lg:mt-5 xl:mt-10"/>
                                             <div
-                                                className="flex justify-center">
-                                                <span className="border-l border-black h-full"></span>
+                                                className="flex justify-center h-0 lg:h-full">
+                                                <span className="border-l border-black lg:h-full"></span>
                                             </div>
                                             <LoadingImage src={nudgeGif} alt="Wapo discovery section"
-                                                          imgClassName="w-auto h-64 mx-10 mt-10"/>
+                                                          imgClassName="w-auto h-56 xl:h-64 lg:ml-5 xl:mx-10 lg:mt-5 xl:mt-10"/>
                                         </div>
                                     </div>
                                 </div>
-                                <p className="mt-5 text-black text-md font-normal font-sans text-center">From left to
-                                    right, top to bottom: Countdown timer and auto-advancing of Vertical Videos, CTA
-                                    link of
-                                    Immersion Article Carousel, Live Reporter Insight, Nudge animation in Discovery</p>
+                                <p className="mt-5 text-black text-sm md:text-base lg:text-md font-normal font-sans text-center">From
+                                    left to right, top to bottom: Countdown timer and auto-advancing of Vertical Videos,
+                                    CTA
+                                    link of Immersion Article Carousel, Live Reporter Insight, Nudge animation in
+                                    Discovery.</p>
                             </div>
                         }
                     </div>
