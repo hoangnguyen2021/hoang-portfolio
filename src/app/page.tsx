@@ -35,6 +35,7 @@ const Home = () => {
         <main>
             <HeroSection/>
             <IntroSection/>
+            <div className="border-dashed border-2 border-tiber"></div>
             <div>
                 <SectionHeading title="Skills"/>
                 <SkillsSection skills={skills}/>
