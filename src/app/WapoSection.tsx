@@ -40,29 +40,29 @@ const WapoSection: React.FC<ADCSectionProps> = () => {
                     show={!expanding}
                     enter="transition-all duration-1000"
                     enterFrom="opacity-0 w-full absolute right-0"
-                    enterTo="opacity-100 w-[28rem] relative"
+                    enterTo="opacity-100 w-full 2xl:w-[28rem] relative"
                     leave="transition-all duration-1000"
-                    leaveFrom="opacity-100 w-[28rem] relative"
+                    leaveFrom="opacity-100 w-full 2xl:w-[28rem] relative"
                     leaveTo="opacity-0 w-full absolute right-0"
-                    className="relative min-w-[28rem] w-[28rem] h-24 md:h-36 2xl:h-full">
+                    className="relative w-full 2xl:min-w-[28rem] 2xl:w-[28rem] h-24 md:h-36 2xl:h-full">
                     <Image src={wapoLogo1} alt={"The Washington Post"}
                            className="absolute right-0 w-auto h-full object-cover"/>
                 </Transition>
                 <div onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}
                      className="relative flex flex-col h-full justify-between">
-                    <div className="flex flex-col justify-center gap-y-3 px-10 sm:px-20 py-10">
+                    <div className="flex flex-col justify-center gap-y-3 px-5 sm:px-10 md:px-20 py-5 sm:py-10">
                         <div className="flex flex-col lg:flex-row gap-y-3 lg:gap-y-0 justify-between items-center">
-                            <Image src={wapoLogo2} alt="" className="w-auto h-12 lg:h-14"/>
-                            <div className="text-sm md:text-base lg:text-lg font-normal font-sans">
+                            <Image src={wapoLogo2} alt="" className="w-auto h-10 sm:h-12 lg:h-14"/>
+                            <div className="text-xs sm:text-sm md:text-base lg:text-lg font-normal font-sans">
                                 <span className="text-gray-500">Washington, D.C.</span>
                                 <span className="text-tiber"> | May 2022 - December 2022</span>
                             </div>
                         </div>
                         <div>
                         <span
-                            className="text-gray-500 text-sm md:text-base lg:text-lg font-normal font-sans">Software Engineer Intern, Android</span>
+                            className="text-gray-500 text-xs sm:text-sm md:text-base lg:text-lg font-normal font-sans">Software Engineer Intern, Android</span>
                         </div>
-                        <div className="text-black text-sm md:text-base lg:text-md font-normal font-sans">
+                        <div className="text-black text-xs sm:text-sm md:text-base lg:text-md font-normal font-sans">
                             <p>• Build Washington Post Wear App on Wear OS that features browsing articles, playing
                                 text-to-speech and podcasts, paywall, push notifications, watch face complications, and
                                 mobile-wear communication.</p>
@@ -81,7 +81,7 @@ const WapoSection: React.FC<ADCSectionProps> = () => {
                             <p>• Integrate in-app tracking and send user-related tracking metrics to analytics.</p>
                         </div>
                         {expanding &&
-                            <div className="max-w-7xl mx-auto mt-10 flex flex-col items-center gap-y-5">
+                            <div className="max-w-7xl mx-auto mt-5 sm:mt-10 flex flex-col items-center gap-y-5">
                                 <div
                                     className="grid grid-cols-1 gap-y-5 lg:gap-y-0 lg:flex lg:justify-center lg:items-stretch">
                                     <div className="flex justify-center lg:mr-5 xl:mr-10">
@@ -111,7 +111,7 @@ const WapoSection: React.FC<ADCSectionProps> = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <p className="mt-5 text-black text-sm md:text-base lg:text-md font-normal font-sans text-center">From
+                                <p className="mt-5 text-black text-xs sm:text-sm md:text-base lg:text-md font-normal font-sans text-center">From
                                     left to right, top to bottom: Countdown timer and auto-advancing of Vertical Videos,
                                     CTA
                                     link of Immersion Article Carousel, Live Reporter Insight, Nudge animation in
@@ -131,7 +131,7 @@ const WapoSection: React.FC<ADCSectionProps> = () => {
                         <div className="flex">
                             <button
                                 onClick={expandOrCollapse}
-                                className="w-full bg-black border-3 border-red-600 text-white text-md font-mono flex justify-center py-2">
+                                className="w-full bg-black border-3 border-red-600 text-white text-md font-mono flex justify-center py-1 sm:py-2">
                                 {expanding ? <ChevronUpIcon/> :
                                     <ChevronDownIcon/>}
                             </button>

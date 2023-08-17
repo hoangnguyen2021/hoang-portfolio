@@ -16,7 +16,7 @@ type SkillsSectionProps = {
 const SkillsSection: React.FC<SkillsSectionProps> = ({skills}) => {
     return (
         <section className="bg-white">
-            <div className="grid grid-cols-3 lg:flex lg:justify-around gap-10 p-10">
+            <div className="grid grid-cols-3 lg:flex lg:justify-around gap-10 px-5 sm:px-10 py-10">
                 {skills.map(skill =>
                     <SkillComponent key={skill.id} id={skill.id} name={skill.name} logo={skill.logo}
                                     yearsOfExp={skill.yearsOfExp}/>)}

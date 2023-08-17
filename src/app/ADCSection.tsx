@@ -35,33 +35,33 @@ const ADCSection: React.FC<ADCSectionProps> = () => {
     return (
         <section>
             <div
-                className={classNames("relative w-full flex flex-col 2xl:flex-row items-center transition-height duration-1000", expanding ? "2xl:h-[76rem]" : "2xl:h-[28rem]")}>
+                className={classNames("relative w-full flex flex-col 2xl:flex-row items-center transition-height duration-1000", expanding ? "2xl:h-[64rem]" : "2xl:h-[28rem]")}>
                 <Transition
                     show={!expanding}
                     enter="transition-all duration-1000"
                     enterFrom="opacity-0 w-full absolute"
-                    enterTo="opacity-100 w-96 relative"
+                    enterTo="opacity-100 w-full 2xl:w-[28rem] relative"
                     leave="transition-all duration-1000"
-                    leaveFrom="opacity-100 w-96 relative"
+                    leaveFrom="opacity-100 w-full 2xl:w-[28rem] relative"
                     leaveTo="opacity-0 w-full absolute"
-                    className="relative min-w-[28rem] w-[28rem] h-24 md:h-36 2xl:h-full">
+                    className="relative w-full 2xl:min-w-[28rem] 2xl:w-[28rem] h-24 md:h-36 2xl:h-full">
                     <Image src={adcLogo} alt={"Alarm.com"}
                            className={classNames("absolute left-0 w-auto h-full object-cover")}/>
                 </Transition>
                 <div onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}
                      className="relative flex flex-col h-full justify-between">
-                    <div className="flex flex-col justify-center gap-y-3 px-10 sm:px-20 py-10">
+                    <div className="flex flex-col justify-center gap-y-3 px-5 sm:px-10 md:px-20 py-5 sm:py-10">
                         <div className="flex flex-col md:flex-row gap-y-3 md:gap-y-0 justify-between items-center">
-                            <Image src={adcLogo2} alt="" className="w-auto h-6 lg:h-8"/>
-                            <div className="text-sm md:text-base lg:text-lg font-normal font-sans">
+                            <Image src={adcLogo2} alt="" className="w-auto h-5 sm:h-6 lg:h-8"/>
+                            <div className="text-xs sm:text-sm md:text-base lg:text-lg font-normal font-sans">
                                 <span className="text-gray-500">Tysons, Virginia</span>
                                 <span className="text-tiber"> | May 2023 - August 2023</span>
                             </div>
                         </div>
                         <div>
-                            <span className="text-adc-orange text-sm md:text-base lg:text-lg font-normal font-sans">Software Engineer Intern, Android</span>
+                            <span className="text-adc-orange text-xs sm:text-sm md:text-base lg:text-lg font-normal font-sans">Software Engineer Intern, Android</span>
                         </div>
-                        <div className="text-black text-sm md:text-base lg:text-md font-normal font-sans">
+                        <div className="text-black text-xs sm:text-sm md:text-base lg:text-md font-normal font-sans">
                             <p>• Integrate Offline Device Status on Alarm.com Customer App&apos;s Dashboard and Device
                                 Specific Screen across all Alarm.com Smart Home/Business Devices to greatly enhance user
                                 experience with clear indication of Connectivity Status and options for Recovery and
@@ -76,7 +76,7 @@ const ADCSection: React.FC<ADCSectionProps> = () => {
                                 storage and camera Permissions for access to various features in the app.</p>
                         </div>
                         {expanding && <>
-                            <div className="grid grid-cols-2 xl:flex xl:justify-evenly gap-3 md:gap-5 mt-10">
+                            <div className="grid grid-cols-2 xl:flex xl:justify-evenly gap-3 md:gap-5 mt-5 sm:mt-10">
                                 <div className="col-span-1">
                                     <LoadingImage src={offlineWaterPng} alt="Offline water" imgClassName="w-72 h-auto"/>
                                 </div>
@@ -91,7 +91,7 @@ const ADCSection: React.FC<ADCSectionProps> = () => {
                                     <LoadingImage src={offlineGatePng} alt="Offline gate" imgClassName="w-72 h-auto"/>
                                 </div>
                             </div>
-                            <p className="mt-5 text-black text-sm md:text-base lg:text-md font-normal font-sans text-center">Screenshots
+                            <p className="mt-5 text-black text-xs sm:text-sm md:text-base lg:text-md font-normal font-sans text-center">Screenshots
                                 of
                                 Offline Device Status feature in Alarm.com Customer App. These show Offline Status of
                                 Alarm.com Water Dragon, Water Meter & Valve, Z-Wave Lock, and Remote Gate.</p>
@@ -109,7 +109,7 @@ const ADCSection: React.FC<ADCSectionProps> = () => {
                         <div className="flex">
                             <button
                                 onClick={expandOrCollapse}
-                                className="w-full bg-adc-orange border-3 border-black text-white text-md font-mono flex justify-center py-2">
+                                className="w-full bg-adc-orange border-3 border-black text-white text-md font-mono flex justify-center py-1 sm:py-2">
                                 {expanding ? <ChevronUpIcon/> :
                                     <ChevronDownIcon/>}
                             </button>
@@ -117,7 +117,6 @@ const ADCSection: React.FC<ADCSectionProps> = () => {
                     </Transition>
                 </div>
             </div>
-
         </section>
     );
 };

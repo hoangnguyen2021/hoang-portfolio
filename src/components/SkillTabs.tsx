@@ -122,7 +122,7 @@ const SkillTabs: React.FC<SkillTabsProps> = () => {
     })
 
     return (
-        <div className="bg-tusk w-full p-10">
+        <div className="bg-tusk w-full px-5 sm:px-10 py-10">
             <div className="max-w-5xl mx-auto">
                 <Tab.Group>
                     <Tab.List className="flex gap-x-1 rounded-md bg-pattens-blue p-1">
