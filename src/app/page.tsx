@@ -21,10 +21,10 @@ import mySqlSvg from "../../public/images/mysql.svg";
 const skills: Skill[] = [
     {id: 1, name: "Kotlin", logo: kotlinSvg, yearsOfExp: "3+"},
     {id: 2, name: "Java", logo: javaSvg, yearsOfExp: "4+"},
-    {id: 3, name: "C#", logo: cSharpSvg, yearsOfExp: "1+"},
+    {id: 3, name: "C#", logo: cSharpSvg, yearsOfExp: "3+"},
     {id: 4, name: "Javascript", logo: javascriptSvg, yearsOfExp: "3+"},
     {id: 5, name: "Typescript", logo: typescriptSvg, yearsOfExp: "3+"},
-    {id: 6, name: "C/C++", logo: cplusplusSvg, yearsOfExp: "4+"},
+    {id: 6, name: "C/C++", logo: cplusplusSvg, yearsOfExp: "1+"},
     {id: 7, name: "Python", logo: pythonSvg, yearsOfExp: "1+"},
     {id: 8, name: "Swift", logo: swiftSvg, yearsOfExp: "1+"},
     {id: 9, name: "MySQL", logo: mySqlSvg, yearsOfExp: "2+"}

@@ -78,7 +78,7 @@ const SkillTabs: React.FC<SkillTabsProps> = () => {
                 id: 3,
                 name: "Angular",
                 logo: angularSvg,
-                yearsOfExp: "~0.5"
+                yearsOfExp: "1+"
             },
             {
                 id: 4,
@@ -90,21 +90,21 @@ const SkillTabs: React.FC<SkillTabsProps> = () => {
         Backend: [
             {
                 id: 1,
+                name: ".NET",
+                logo: dotNetSvg,
+                yearsOfExp: "2+"
+            },
+            {
+                id: 2,
                 name: "NodeJS",
                 logo: nodeJsSvg,
                 yearsOfExp: "3+"
             },
             {
-                id: 2,
+                id: 3,
                 name: "ExpressJS",
                 logo: expressJsSvg,
                 yearsOfExp: "3+"
-            },
-            {
-                id: 3,
-                name: ".NET",
-                logo: dotNetSvg,
-                yearsOfExp: "<1"
             },
             {
                 id: 4,
