@@ -35,16 +35,16 @@ const WapoSection: React.FC<ADCSectionProps> = () => {
     return (
         <section>
             <div
-                className={classNames("relative w-full flex flex-col 2xl:flex-row-reverse items-center transition-height duration-1000", expanding ? "2xl:h-[76rem]" : "2xl:h-[28rem]")}>
+                className={classNames("relative w-full flex flex-col 2xl:flex-row-reverse items-center transition-height duration-1000", expanding ? "2xl:h-[76rem]" : "2xl:h-[36rem]")}>
                 <Transition
                     show={!expanding}
                     enter="transition-all duration-1000"
                     enterFrom="opacity-0 w-full absolute right-0"
-                    enterTo="opacity-100 w-full 2xl:w-[28rem] relative"
+                    enterTo="opacity-100 w-full 2xl:w-[36rem] relative"
                     leave="transition-all duration-1000"
-                    leaveFrom="opacity-100 w-full 2xl:w-[28rem] relative"
+                    leaveFrom="opacity-100 w-full 2xl:w-[36rem] relative"
                     leaveTo="opacity-0 w-full absolute right-0"
-                    className="relative w-full 2xl:min-w-[28rem] 2xl:w-[28rem] h-24 md:h-36 2xl:h-full">
+                    className="relative w-full 2xl:min-w-[36rem] 2xl:w-[36rem] h-24 md:h-36 2xl:h-full">
                     <Image src={wapoLogo1} alt={"The Washington Post"}
                            className="absolute right-0 w-auto h-full object-cover"/>
                 </Transition>
@@ -63,22 +63,26 @@ const WapoSection: React.FC<ADCSectionProps> = () => {
                             className="text-gray-500 text-xs sm:text-sm md:text-base lg:text-lg font-normal font-sans">Software Engineer Intern, Android</span>
                         </div>
                         <div className="text-black text-xs sm:text-sm md:text-base lg:text-md font-normal font-sans">
-                            <p>• Build Washington Post Wear App on Wear OS that features browsing articles, playing
-                                text-to-speech and podcasts, paywall, push notifications, watch face complications, and
-                                mobile-wear communication.</p>
-                            <p>• Contribute to the continued development of the Washington Post app on Android and
-                                Amazon
+                            <p>• Spearheaded the development of the Washington Post Wear App on Wear OS, bringing
+                                feature-rich experience including article browsing, article text-to-speech, podcast
+                                playback, paywall integration, push notifications, watch face complications, and
+                                mobile-wear intercommunication.</p>
+                            <p>• Collaborated in the continuous evolution of the Washington Post app, contributing
+                                expertise to enhance its features and performance on both Android and Amazon
                                 devices.</p>
-                            <p>• Implement video countdown timer and auto-advancing for the app’s Vertical Video feature
-                                to
-                                deliver compelling visual storytelling content and appeal to younger subscribers who are
-                                used to this experience on other platforms.</p>
-                            <p>• Build CTA links for the app’s Immersion Carousel that delivers the breath of news
-                                coverage by providing the immersive experience to the users. The project increases
-                                overall Top Stories CTR from 62% to 67% and increase the percentage of users who have
-                                seen half of the headlines on Top Stories from 30% to 40%.
+                            <p>• Engineered and integrated a video countdown timer and auto-advancing capabilities into
+                                the app&apos;s Vertical Video feature, delivering captivating visual storytelling content.
+                                This innovation catered to younger subscribers familiar with similar experiences on
+                                alternate platforms.</p>
+                            <p>• Designed and implemented Call-to-Action links in the project Immersion Carousel,
+                                providing users with an immersive news coverage experience. This initiative resulted in
+                                a notable increase in the Click-Through Rate (CTR) for Top Stories, surging from 62% to
+                                an impressive 67%, and raised the percentage of users exposed to at least half of the
+                                Top Stories headlines from 30% to a significant 40%.
                             </p>
-                            <p>• Integrate in-app tracking and send user-related tracking metrics to analytics.</p>
+                            <p>• Orchestrated seamless integration of in-app tracking mechanisms, facilitating the
+                                collection and transmission of user-related tracking metrics to the analytics team for
+                                comprehensive insights.</p>
                         </div>
                         {expanding &&
                             <div className="max-w-7xl mx-auto mt-5 sm:mt-10 flex flex-col items-center gap-y-5">

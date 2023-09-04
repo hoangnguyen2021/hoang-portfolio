@@ -35,7 +35,7 @@ const ADCSection: React.FC<ADCSectionProps> = () => {
     return (
         <section>
             <div
-                className={classNames("relative w-full flex flex-col 2xl:flex-row items-center transition-height duration-1000", expanding ? "2xl:h-[64rem]" : "2xl:h-[28rem]")}>
+                className={classNames("relative w-full flex flex-col 2xl:flex-row items-center transition-height duration-1000", expanding ? "2xl:h-[68rem]" : "2xl:h-[28rem]")}>
                 <Transition
                     show={!expanding}
                     enter="transition-all duration-1000"
@@ -59,21 +59,22 @@ const ADCSection: React.FC<ADCSectionProps> = () => {
                             </div>
                         </div>
                         <div>
-                            <span className="text-adc-orange text-xs sm:text-sm md:text-base lg:text-lg font-normal font-sans">Software Engineer Intern, Android</span>
+                            <span
+                                className="text-adc-orange text-xs sm:text-sm md:text-base lg:text-lg font-normal font-sans">Software Engineer Intern, Android</span>
                         </div>
                         <div className="text-black text-xs sm:text-sm md:text-base lg:text-md font-normal font-sans">
-                            <p>• Integrate Offline Device Status on Alarm.com Customer App&apos;s Dashboard and Device
-                                Specific Screen across all Alarm.com Smart Home/Business Devices to greatly enhance user
-                                experience with clear indication of Connectivity Status and options for Recovery and
-                                Troubleshooting.</p>
-                            <p>• Work upon ASP.NET C# application to support sending down Offline Device Status to
-                                mobile
-                                clients.</p>
-                            <p>• Write testing for implemented features on backend .NET application and Android
-                                client.</p>
-                            <p>• Refactor deprecated Android Permissions API to new runtime Permissions API to request
-                                media
-                                storage and camera Permissions for access to various features in the app.</p>
+                            <p>• Enhanced the user experience of the Alarm.com Customer App by integrating Offline
+                                Device indicators on both the Dashboard and Device Specific screens for all Alarm.com
+                                Smart Home/Business Devices. This improvement includes clear indications of offline
+                                status and provides users with options for recovery and troubleshooting.</p>
+                            <p>• Collaborated on the .NET application to facilitate the transmission of Offline Status
+                                information to mobile clients. Additionally, implemented a Permissions API for Feature
+                                Gating, streamlining the testing process for the team.</p>
+                            <p>• Demonstrated proficiency in writing comprehensive unit tests for newly implemented
+                                features within the backend .NET application and the Android client.</p>
+                            <p>• Upgraded the Android Permissions API by refactoring the deprecated version to the new
+                                runtime Permissions API. This upgrade enabled seamless access to media storage and
+                                camera permissions, enhancing the functionality of a myriad of app features.</p>
                         </div>
                         {expanding && <>
                             <div className="grid grid-cols-2 xl:flex xl:justify-evenly gap-3 md:gap-5 mt-5 sm:mt-10">
