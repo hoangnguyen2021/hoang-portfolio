@@ -55,7 +55,7 @@ const ADCSection: React.FC<ADCSectionProps> = () => {
                             <Image src={adcLogo2} alt="" className="w-auto h-5 sm:h-6 lg:h-8"/>
                             <div className="text-xs sm:text-sm md:text-base lg:text-lg font-normal font-sans">
                                 <span className="text-gray-500">Tysons, Virginia</span>
-                                <span className="text-tiber"> | May 2023 - August 2023</span>
+                                <span className="text-tiber"> | May 2023 - Aug 2023</span>
                             </div>
                         </div>
                         <div>

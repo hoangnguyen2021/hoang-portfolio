@@ -35,16 +35,16 @@ const WapoSection: React.FC<ADCSectionProps> = () => {
     return (
         <section>
             <div
-                className={classNames("relative w-full flex flex-col 2xl:flex-row-reverse items-center transition-height duration-1000", expanding ? "2xl:h-[76rem]" : "2xl:h-[36rem]")}>
+                className={classNames("relative w-full flex flex-col 2xl:flex-row-reverse items-center transition-height duration-1000", expanding ? "2xl:h-[76rem]" : "2xl:h-[30rem]")}>
                 <Transition
                     show={!expanding}
                     enter="transition-all duration-1000"
                     enterFrom="opacity-0 w-full absolute right-0"
-                    enterTo="opacity-100 w-full 2xl:w-[36rem] relative"
+                    enterTo="opacity-100 w-full 2xl:w-[30rem] relative"
                     leave="transition-all duration-1000"
-                    leaveFrom="opacity-100 w-full 2xl:w-[36rem] relative"
+                    leaveFrom="opacity-100 w-full 2xl:w-[30rem] relative"
                     leaveTo="opacity-0 w-full absolute right-0"
-                    className="relative w-full 2xl:min-w-[36rem] 2xl:w-[36rem] h-24 md:h-36 2xl:h-full">
+                    className="relative w-full 2xl:min-w-[30rem] 2xl:w-[30rem] h-24 md:h-36 2xl:h-full">
                     <Image src={wapoLogo1} alt={"The Washington Post"}
                            className="absolute right-0 w-auto h-full object-cover"/>
                 </Transition>
@@ -55,7 +55,7 @@ const WapoSection: React.FC<ADCSectionProps> = () => {
                             <Image src={wapoLogo2} alt="" className="w-auto h-10 sm:h-12 lg:h-14"/>
                             <div className="text-xs sm:text-sm md:text-base lg:text-lg font-normal font-sans">
                                 <span className="text-gray-500">Washington, D.C.</span>
-                                <span className="text-tiber"> | May 2022 - December 2022</span>
+                                <span className="text-tiber"> | May 2022 - Dec 2022</span>
                             </div>
                         </div>
                         <div>
@@ -80,9 +80,6 @@ const WapoSection: React.FC<ADCSectionProps> = () => {
                                 an impressive 67%, and raised the percentage of users exposed to at least half of the
                                 Top Stories headlines from 30% to a significant 40%.
                             </p>
-                            <p>• Orchestrated seamless integration of in-app tracking mechanisms, facilitating the
-                                collection and transmission of user-related tracking metrics to the analytics team for
-                                comprehensive insights.</p>
                         </div>
                         {expanding &&
                             <div className="max-w-7xl mx-auto mt-5 sm:mt-10 flex flex-col items-center gap-y-5">

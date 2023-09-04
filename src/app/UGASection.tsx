@@ -8,15 +8,15 @@ type ADCSectionProps = {};
 const UGASection: React.FC<ADCSectionProps> = () => {
     return (
         <section>
-            <div className="relative w-full xl:h-96 flex flex-col xl:flex-row items-center">
+            <div className="relative w-full 2xl:h-96 flex flex-col 2xl:flex-row items-center">
                 <Image src={ugaLogo} alt={"University of Georgia"}
-                       className="w-auto h-16 sm:h-24 md:h-36 xl:h-96 object-cover"/>
+                       className="w-auto h-16 sm:h-24 md:h-36 2xl:h-96 object-cover"/>
                 <div className="flex flex-col gap-y-3 w-full px-5 sm:px-10 md:px-20 py-5 sm:py-10">
                     <div className="flex flex-col md:flex-row justify-between items-center">
                         <Image src={ugaLogo2} alt="" className="h-16 sm:h-20 md:h-24 w-auto"/>
                         <div className="text-xs sm:text-sm md:text-base lg:text-lg font-normal font-sans">
                             <span className="text-gray-500">Athens, Georgia</span>
-                            <span className="text-tiber"> | August 2021 - December 2023</span>
+                            <span className="text-tiber"> | Aug 2021 - Dec 2023</span>
                         </div>
                     </div>
                     <div>
