@@ -35,16 +35,16 @@ const WapoSection: React.FC<ADCSectionProps> = () => {
     return (
         <section>
             <div
-                className={classNames("relative w-full flex flex-col 2xl:flex-row-reverse items-center transition-height duration-1000", expanding ? "2xl:h-[76rem]" : "2xl:h-[30rem]")}>
+                className={classNames("relative w-full flex flex-col 2xl:flex-row-reverse items-center transition-height duration-1000", expanding ? "2xl:h-[76rem]" : "2xl:h-[34rem]")}>
                 <Transition
                     show={!expanding}
                     enter="transition-all duration-1000"
                     enterFrom="opacity-0 w-full absolute right-0"
-                    enterTo="opacity-100 w-full 2xl:w-[30rem] relative"
+                    enterTo="opacity-100 w-full 2xl:w-[34rem] relative"
                     leave="transition-all duration-1000"
-                    leaveFrom="opacity-100 w-full 2xl:w-[30rem] relative"
+                    leaveFrom="opacity-100 w-full 2xl:w-[34rem] relative"
                     leaveTo="opacity-0 w-full absolute right-0"
-                    className="relative w-full 2xl:min-w-[30rem] 2xl:w-[30rem] h-24 md:h-36 2xl:h-full">
+                    className="relative w-full 2xl:min-w-[34rem] 2xl:w-[34rem] h-24 md:h-36 2xl:h-full">
                     <Image src={wapoLogo1} alt={"The Washington Post"}
                            className="absolute right-0 w-auto h-full object-cover"/>
                 </Transition>
